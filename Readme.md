@@ -1,4 +1,4 @@
-﻿# GDS.ExpressApp.UserFilter
+﻿# GDS.ExpressApp.UserFilter (Win+Web)
 
 With this module, user-specific filters can be created in listviews for all data elements in the XAF Applications. These filters can be created for personal use or made publicly available to all users. 
 
@@ -8,6 +8,8 @@ The module consists of four main elements:
 * "Filter" selection field in the menu above
 * Action for adding new filters (icon at the top of the menu next to the filter selection field)
 * ListView in the Administration pane of the Navigation
+
+**This module can be used in Web and Desktop projects.**
 
 ## Getting Started
 

@@ -6,9 +6,9 @@
     <title>GDS.ExpressApp.UserFilter.Module</title>
     <authors>Christian Angermeier (ca@gds-innovations.de)</authors>
     <owners>GDS Innovations GmbH</owners>
-    <licenseUrl>https://www.gds-innovations.de</licenseUrl>
-    <projectUrl>https://www.gds-innovations.de</projectUrl>
-    <Icon>https://gds-innovations.de/wp-content/uploads/2017/12/favicon.ico</Icon>
+    <license type="expression">MS-PL</license>
+    <projectUrl>https://github.com/gdsanger/GDS.ExpressApp.UserFilter</projectUrl>
+    <iconUrl>https://gds-innovations.de/wp-content/uploads/2017/12/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>With this module, user-specific filters can be created in listviews for all data elements in the XAF Applications. These filters can be created for personal use or made publicly available to all users.</description>
     <releaseNotes>First initial Release</releaseNotes>

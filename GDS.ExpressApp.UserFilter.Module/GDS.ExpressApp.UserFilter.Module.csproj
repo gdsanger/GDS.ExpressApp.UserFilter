@@ -152,8 +152,6 @@
       <DependentUpon>Module.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="LICENSE.md" />
-    <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Controllers\CriteriaController.resx">
@@ -168,7 +166,6 @@
     <None Include="GDS.ExpressApp.UserFilter.Module.nuspec" />
     <None Include="Images\ReadMe.txt" />
     <None Include="packages.config" />
-    <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FunctionalTests\config.xml" />

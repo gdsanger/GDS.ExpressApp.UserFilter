@@ -48,7 +48,7 @@ I use the version information from DevExpress to make sure that there are no inc
 
 ## Authors
 
-* **Christian Angermeier**  - [PurpleBooth](https://github.com/gdsanger)
+* [**Christian Angermeier**](https://github.com/gdsanger)
 
 ## License
 

@@ -1,4 +1,17 @@
-﻿using DevExpress.Data.Filtering;
+﻿// ***********************************************************************
+// Assembly         : GDS.ExpressApp.UserFilter.Module
+// Author           : angermeier
+// Created          : 01-09-2020
+//
+// Last Modified By : angermeier
+// Last Modified On : 01-10-2020
+// ***********************************************************************
+// <copyright file="FilteringCriterion.cs" company="GDS Innovations GmbH">
+//     Copyright © 2020
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.DC;
 using DevExpress.ExpressApp.Editors;
@@ -24,11 +37,14 @@ namespace GDS.ExpressApp.UserFilter.Module.BusinessObjects
     public class FilteringCriterion : BaseObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FilteringCriterion"/> class.
+        /// Initializes a new instance of the <see cref="FilteringCriterion" /> class.
         /// </summary>
         /// <param name="session">A DevExpress.Xpo.Session object which represents a persistent object's cache where the business object will be instantiated.</param>
         public FilteringCriterion(Session session) : base(session) { }
 
+        /// <summary>
+        /// Invoked when the current object is about to be initialized after its creation.
+        /// </summary>
         public override void AfterConstruction()
         {
             base.AfterConstruction();
@@ -69,12 +85,20 @@ namespace GDS.ExpressApp.UserFilter.Module.BusinessObjects
             get { return GetPropertyValue<string>("FilterKriterium"); }
             set { SetPropertyValue<string>("FilterKriterium", value); }
         }
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="FilteringCriterion"/> is public.
+        /// </summary>
+        /// <value><c>true</c> if public; otherwise, <c>false</c>.</value>
         public bool Public
         {
             get { return GetPropertyValue<bool>("Public"); }
             set { SetPropertyValue<bool>("Public", value); }
         }
         //[Browsable(false)]
+        /// <summary>
+        /// Gets or sets the user.
+        /// </summary>
+        /// <value>The user.</value>
         public PermissionPolicyUser User
         {
             get { return GetPropertyValue<PermissionPolicyUser>("User"); }

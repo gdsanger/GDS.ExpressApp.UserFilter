@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : GDS.ExpressApp.UserFilter.Module
+// Author           : angermeier
+// Created          : 01-09-2020
+//
+// Last Modified By : angermeier
+// Last Modified On : 01-09-2020
+// ***********************************************************************
+// <copyright file="UserBasedFilterController.cs" company="GDS Innovations GmbH">
+//     Copyright © 2020
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +32,20 @@ using GDS.ExpressApp.UserFilter.Module.BusinessObjects;
 namespace GDS.ExpressApp.UserFilter.Module.Controllers
 {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
+    /// <summary>
+    /// Class UserBasedFilterController.
+    /// Implements the <see cref="DevExpress.ExpressApp.ViewController" />
+    /// </summary>
+    /// <seealso cref="DevExpress.ExpressApp.ViewController" />
     public partial class UserBasedFilterController : ViewController
     {
+        /// <summary>
+        /// The add filter
+        /// </summary>
         private SimpleAction AddFilter;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserBasedFilterController"/> class.
+        /// </summary>
         public UserBasedFilterController()
         {
             InitializeComponent();
@@ -37,21 +61,35 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
             this.AddFilter.TypeOfView = typeof(ListView);
             this.AddFilter.Execute += new SimpleActionExecuteEventHandler(this.AddFilter_Execute);
         }
+        /// <summary>
+        /// Called when [activated].
+        /// </summary>
         protected override void OnActivated()
         {
             base.OnActivated();
             // Perform various tasks depending on the target View.
         }
+        /// <summary>
+        /// Called when [view controls created].
+        /// </summary>
         protected override void OnViewControlsCreated()
         {
             base.OnViewControlsCreated();
             // Access and customize the target View control.
         }
+        /// <summary>
+        /// Called when [deactivated].
+        /// </summary>
         protected override void OnDeactivated()
         {
             // Unsubscribe from previously subscribed events and release other references and resources.
             base.OnDeactivated();
         }
+        /// <summary>
+        /// Handles the Execute event of the AddFilter control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="SimpleActionExecuteEventArgs"/> instance containing the event data.</param>
         private void AddFilter_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
             if (View.CurrentObject == null) return;

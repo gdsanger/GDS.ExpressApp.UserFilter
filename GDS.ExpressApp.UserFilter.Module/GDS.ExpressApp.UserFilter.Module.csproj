@@ -161,9 +161,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BusinessObjects\ReadMe.txt" />
     <None Include="Controllers\ReadMe.txt" />
     <None Include="DatabaseUpdate\ReadMe.txt" />
+    <None Include="GDS.ExpressApp.UserFilter.Module.nuspec" />
     <None Include="Images\ReadMe.txt" />
     <None Include="packages.config" />
     <None Include="ReadMe.txt" />

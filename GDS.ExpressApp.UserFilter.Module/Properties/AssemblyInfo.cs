@@ -1,4 +1,17 @@
-﻿using System.Reflection;
+﻿// ***********************************************************************
+// Assembly         : GDS.ExpressApp.UserFilter.Module
+// Author           : angermeier
+// Created          : 01-09-2020
+//
+// Last Modified By : angermeier
+// Last Modified On : 01-10-2020
+// ***********************************************************************
+// <copyright file="AssemblyInfo.cs" company="GDS Innovations GmbH">
+//     Copyright © 2020
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -29,4 +42,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.1925.*")]
+[assembly: AssemblyVersion("19.25.0.3")]
+[assembly: AssemblyFileVersion("19.25.0.3")]

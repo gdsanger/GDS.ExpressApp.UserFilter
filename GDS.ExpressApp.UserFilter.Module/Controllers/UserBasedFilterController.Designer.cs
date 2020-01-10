@@ -1,5 +1,23 @@
-﻿namespace GDS.ExpressApp.UserFilter.Module.Controllers
+﻿// ***********************************************************************
+// Assembly         : GDS.ExpressApp.UserFilter.Module
+// Author           : angermeier
+// Created          : 01-09-2020
+//
+// Last Modified By : angermeier
+// Last Modified On : 01-09-2020
+// ***********************************************************************
+// <copyright file="UserBasedFilterController.Designer.cs" company="GDS Innovations GmbH">
+//     Copyright © 2020
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+namespace GDS.ExpressApp.UserFilter.Module.Controllers
 {
+    /// <summary>
+    /// Class UserBasedFilterController.
+    /// Implements the <see cref="DevExpress.ExpressApp.ViewController" />
+    /// </summary>
+    /// <seealso cref="DevExpress.ExpressApp.ViewController" />
     partial class UserBasedFilterController
     {
         /// <summary>
@@ -7,7 +25,7 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>

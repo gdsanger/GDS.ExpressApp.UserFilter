@@ -4,9 +4,9 @@
 // Created          : 08-14-2019
 //
 // Last Modified By : angermeier
-// Last Modified On : 08-14-2019
+// Last Modified On : 01-09-2020
 // ***********************************************************************
-// <copyright file="CriteriaController.cs" company="">
+// <copyright file="CriteriaController.cs" company="GDS Innovations GmbH">
 //     Copyright © 2019
 // </copyright>
 // <summary></summary>
@@ -26,7 +26,10 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
     /// <seealso cref="DevExpress.ExpressApp.ObjectViewController" />
     public class CriteriaController : ObjectViewController
     {
-       
+
+        /// <summary>
+        /// The components
+        /// </summary>
         private System.ComponentModel.IContainer components;
 
         /// <summary>
@@ -34,7 +37,7 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
         /// </summary>
         private SingleChoiceAction filteringCriterionAction;
         /// <summary>
-        /// Initializes a new instance of the <see cref="CriteriaController"/> class.
+        /// Initializes a new instance of the <see cref="CriteriaController" /> class.
         /// </summary>
         public CriteriaController()
         {
@@ -69,7 +72,7 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
         /// Handles the Execute event of the FilteringCriterionAction control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="SingleChoiceActionExecuteEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="SingleChoiceActionExecuteEventArgs" /> instance containing the event data.</param>
         private void FilteringCriterionAction_Execute(
             object sender, SingleChoiceActionExecuteEventArgs e)
         {
@@ -81,6 +84,9 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
             ((ListView)View).CollectionSource.EndUpdateCriteria();
         }
 
+        /// <summary>
+        /// Initializes the component.
+        /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();

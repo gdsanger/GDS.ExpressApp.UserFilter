@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="GDS.ExpressApp.UserFilter">
+  <BOModel>
+    <Class Name="GDS.ExpressApp.UserFilter.Module.BusinessObjects.FilteringCriterion" IsCloneable="True" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Persönlicher Bereich" Caption="Persönlicher Bereich" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Meine Filter" ViewId="FilteringCriterion_ListView_Benutzer" Caption="Meine Filter" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="19.2.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="19.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="FilteringCriterion_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.221374045801525">
+            <LayoutGroup Id="FilteringCriterion" RelativeSize="100">
+              <LayoutItem Id="Beschreibung" RelativeSize="37.058823529411768" />
+              <LayoutItem Id="Objekt" RelativeSize="28.235294117647058" />
+              <LayoutGroup Id="Auto929f5dab-e304-410d-9b8a-3e4426a61404" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="34.705882352941174" IsNewNode="True">
+                <LayoutItem Id="Public" ViewItem="Public" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="Benutzer" ViewItem="Benutzer" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Public" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="83.778625954198475">
+            <LayoutItem Id="FilterKriterium" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="FilteringCriterion_ListView">
+      <Columns>
+        <ColumnInfo Id="Objekt" Width="250" />
+        <ColumnInfo Id="Public" Width="249" />
+      </Columns>
+    </ListView>
+    <ListView Id="FilteringCriterion_ListView_Benutzer" ClassName="GDS.ExpressApp.UserFilter.Module.BusinessObjects.FilteringCriterion" Criteria="[User.Oid] = CurrentUserId()" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="FilterKriterium" PropertyName="FilterKriterium" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Beschreibung" PropertyName="Beschreibung" Width="312" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="Objekt" PropertyName="Objekt" Width="254" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Public" PropertyName="Public" Width="298" Index="2" IsNewNode="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

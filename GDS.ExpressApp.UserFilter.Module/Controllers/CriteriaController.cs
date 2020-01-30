@@ -16,6 +16,9 @@ using DevExpress.ExpressApp.Actions;
 using DevExpress.Persistent.Base;
 using DevExpress.ExpressApp.Editors;
 using GDS.ExpressApp.UserFilter.Module.BusinessObjects;
+using DevExpress.Xpo;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GDS.ExpressApp.UserFilter.Module.Controllers
 {
@@ -52,7 +55,10 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
         protected override void OnActivated()
         {
             filteringCriterionAction.Items.Clear();
-            foreach (FilteringCriterion criterion in ObjectSpace.GetObjects<FilteringCriterion>())
+            IEnumerable<FilteringCriterion> criterions = ObjectSpace.GetObjects<FilteringCriterion>();
+            criterions = from FilteringCriterion cl in criterions orderby cl.Beschreibung select cl;
+
+            foreach (FilteringCriterion criterion in criterions)
             {
                 try
                 {
@@ -66,7 +72,7 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
                 catch { }
             }
             if (filteringCriterionAction.Items.Count > 0)
-                filteringCriterionAction.Items.Add(new ChoiceActionItem("Alle", null));
+                filteringCriterionAction.Items.Add(new ChoiceActionItem("Alle Datensätze anzeigen", null));
         }
         /// <summary>
         /// Handles the Execute event of the FilteringCriterionAction control.

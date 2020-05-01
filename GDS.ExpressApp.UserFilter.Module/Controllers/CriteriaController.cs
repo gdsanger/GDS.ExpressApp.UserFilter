@@ -62,11 +62,14 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
             {
                 try
                 {
-                    if (criterion.Objekt.IsAssignableFrom(View.ObjectTypeInfo.Type) &&
-                   (criterion.Public || criterion.User.UserName == SecuritySystem.CurrentUserName))
+                    if (criterion.Objekt != null)
                     {
-                        filteringCriterionAction.Items.Add(
-                            new ChoiceActionItem(criterion.Beschreibung, criterion.FilterKriterium));
+                        if (criterion.Objekt.IsAssignableFrom(View.ObjectTypeInfo.Type) &&
+                       (criterion.Public || criterion.User.UserName == SecuritySystem.CurrentUserName))
+                        {
+                            filteringCriterionAction.Items.Add(
+                                new ChoiceActionItem(criterion.Beschreibung, criterion.FilterKriterium));
+                        }
                     }
                 }
                 catch { }
@@ -95,8 +98,7 @@ namespace GDS.ExpressApp.UserFilter.Module.Controllers
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-        
+            this.components = new System.ComponentModel.Container();       
 
         }
 
